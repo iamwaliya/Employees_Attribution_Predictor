@@ -1,0 +1,11 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ipynb_checkpoints/
+.venv/
+venv/
+.DS_Store
+
+# Local database and exports (the app recreates the database on first run)
+data/employees.db
+data/employees_export.csv

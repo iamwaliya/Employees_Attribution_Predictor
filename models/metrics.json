@@ -1,0 +1,77 @@
+{
+  "best_model": "Logistic Regression",
+  "justification": "Logistic Regression was selected because it achieved the highest cross-validated ROC-AUC (0.786, ahead of Random Forest by +0.013). ROC-AUC measures how well a model ranks leavers above stayers regardless of the decision threshold, which suits an imbalanced problem where plain accuracy is misleading. On the untouched test set it reached ROC-AUC 0.777, recall 0.688, precision 0.330 and F1 0.446. Selection used cross-validation on the training data only, so the test metrics are an unbiased estimate of real-world performance.",
+  "imbalance_strategy": "class_weight",
+  "test_metrics": {
+    "accuracy": 0.7266666666666667,
+    "precision": 0.33,
+    "recall": 0.6875,
+    "f1": 0.44594594594594594,
+    "roc_auc": 0.7774470899470899
+  },
+  "comparison": [
+    {
+      "model": "Logistic Regression",
+      "cv_roc_auc": 0.7863,
+      "accuracy": 0.7267,
+      "precision": 0.33,
+      "recall": 0.6875,
+      "f1": 0.4459,
+      "roc_auc": 0.7774,
+      "tuning_seconds": 2.6
+    },
+    {
+      "model": "Random Forest",
+      "cv_roc_auc": 0.773,
+      "accuracy": 0.77,
+      "precision": 0.3562,
+      "recall": 0.5417,
+      "f1": 0.4298,
+      "roc_auc": 0.766,
+      "tuning_seconds": 51.2
+    },
+    {
+      "model": "XGBoost",
+      "cv_roc_auc": 0.7656,
+      "accuracy": 0.7367,
+      "precision": 0.3368,
+      "recall": 0.6667,
+      "f1": 0.4476,
+      "roc_auc": 0.7572,
+      "tuning_seconds": 5.5
+    }
+  ],
+  "best_params": {
+    "Logistic Regression": {
+      "C": 0.1
+    },
+    "Random Forest": {
+      "max_depth": 12,
+      "max_features": "sqrt",
+      "min_samples_leaf": 11,
+      "n_estimators": 221
+    },
+    "XGBoost": {
+      "colsample_bytree": 0.6915192661966489,
+      "learning_rate": 0.012992976740520353,
+      "max_depth": 4,
+      "min_child_weight": 3,
+      "n_estimators": 185,
+      "reg_lambda": 5.766810466779007,
+      "subsample": 0.8497416192535173
+    }
+  },
+  "feature_importance": {
+    "MonthlyIncome": 0.0749,
+    "JobSatisfaction": 0.0492,
+    "OverTime": 0.024,
+    "YearsAtCompany": 0.02,
+    "Department": 0.0158,
+    "WorkLifeBalance": 0.0144,
+    "Age": 0.0124,
+    "DistanceFromHome": 0.0085,
+    "PerformanceRating": 0.0009
+  },
+  "train_rows": 1200,
+  "test_rows": 300
+}
