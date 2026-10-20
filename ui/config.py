@@ -14,7 +14,7 @@ WORKSPACES = [
     {"name": "Mumbai Operations", "meta": "Sales and Marketing", "demo": True},
     {"name": "Bengaluru Tech Hub", "meta": "Engineering", "demo": True},
 ]
-USER = {"name": "Aryan Singh", "role": "Workspace admin"}
+USER = {"name": "Waliya Rizwan", "role": "Workspace Admin"}
 
 
 @dataclass(frozen=True)
