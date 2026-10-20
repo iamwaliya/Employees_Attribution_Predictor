@@ -10,9 +10,9 @@ BRAND_TAGLINE = "People analytics"
 # The workspace switcher and profile menu are presentation-only (the app has one
 # shared database). Change the strings below to match your own demo.
 WORKSPACES = [
-    {"name": "Pune HQ", "meta": "All departments", "demo": False},
+    {"name": "Bengaluru HQ", "meta": "All departments", "demo": False},
     {"name": "Mumbai Operations", "meta": "Sales and Marketing", "demo": True},
-    {"name": "Bengaluru Tech Hub", "meta": "Engineering", "demo": True},
+    {"name": "Pune Tech Hub", "meta": "Engineering", "demo": True},
 ]
 USER = {"name": "Waliya Rizwan", "role": "Workspace Admin"}
 
